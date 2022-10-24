@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import Card from "./components/Card";
+import UseCounter from "./hooks/useCounter";
 
 function App() {
+
+  const [counter, incrementar, decrementar] = UseCounter();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <div>
+      <h1>Visualiza los personajes de la serie Rick and Morty!</h1>
+      <Card numero={counter}/>
+      <h3>{counter}</h3>
+      <button onClick={() => incrementar()}>Incrementar</button>
+      <button onClick={() => decrementar()}>Decrementar</button>
     </div>
   );
 }
