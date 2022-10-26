@@ -12,7 +12,6 @@ const getPersonajesApi = async(numero) => {
     } catch(e) {
         console.log(e);
     }
-    // console.log("DATA", data);
     return data
 }
 

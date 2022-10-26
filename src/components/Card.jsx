@@ -6,8 +6,7 @@ const Card = (numero) => {
     const [personajeApi, setPersonajeApi] = useState({});
   
     useEffect(() => {
-        const personaje = getPersonajesApi(numero.numero).then(value => {
-            // console.log("VALUE", value);
+        getPersonajesApi(numero.numero).then(value => {
             setPersonajeApi(value)
         });
         
